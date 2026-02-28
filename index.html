@@ -1,5 +1,148 @@
-<html>
-  <body>
-    
-  </body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather UI (Semantic HTML)</title>
+</head>
+
+<body>
+  <main aria-label="Weather dashboard">
+    <!-- Left panel: current day -->
+    <article aria-label="Current conditions">
+      <header>
+        <h1>Monday</h1>
+        <p>
+          <time datetime="2022-06-20">20 Jun 2022</time>
+        </p>
+      </header>
+
+      <section aria-label="Current summary">
+        <figure aria-label="Weather icon">
+          <!-- Decorative icon (optional). Keep or replace with an actual SVG/icon component. -->
+          <span aria-hidden="true">☀️</span>
+        </figure>
+
+        <p>
+          <strong>29&nbsp;°C</strong>
+        </p>
+        <p>Sunny</p>
+      </section>
+    </article>
+
+    <!-- Right panel: details -->
+    <section aria-label="Weather details">
+      <h2>Details</h2>
+
+      <dl aria-label="Key metrics">
+        <div>
+          <dt>Precipitation</dt>
+          <dd>0%</dd>
+        </div>
+        <div>
+          <dt>Humidity</dt>
+          <dd>42%</dd>
+        </div>
+        <div>
+          <dt>Wind</dt>
+          <dd>3 km/h</dd>
+        </div>
+      </dl>
+
+      <section aria-label="Highlights">
+        <article aria-label="UV index">
+          <header>
+            <h3>UV Index</h3>
+          </header>
+          <p>
+            <strong>0</strong>
+            <span>Low</span>
+          </p>
+
+          <!-- Semantic "meter" for a bounded numeric value -->
+          <p>
+            <label for="uv-meter">UV level</label><br />
+            <meter id="uv-meter" min="0" max="11" low="2" high="7" optimum="0" value="0">
+              0
+            </meter>
+          </p>
+        </article>
+
+        <article aria-label="Daily temperature range">
+          <header>
+            <h3>Temperature Range</h3>
+            <p>
+              <time datetime="2026-02-24">Tuesday, Feb 24th 2026</time>
+            </p>
+          </header>
+
+          <dl aria-label="High and low temperatures">
+            <div>
+              <dt>High</dt>
+              <dd>32&nbsp;°C</dd>
+            </div>
+            <div>
+              <dt>Low</dt>
+              <dd>24&nbsp;°C</dd>
+            </div>
+          </dl>
+        </article>
+      </section>
+
+      <section aria-label="Forecast">
+        <h2>Forecast</h2>
+
+        <ol aria-label="4-day forecast list">
+          <li>
+            <article aria-label="Tuesday forecast" aria-current="true">
+              <header>
+                <h3>Tue</h3>
+              </header>
+              <p aria-label="Condition"><span aria-hidden="true">☀️</span> Sunny</p>
+              <p><strong>30&nbsp;°C</strong></p>
+            </article>
+          </li>
+
+          <li>
+            <article aria-label="Wednesday forecast">
+              <header>
+                <h3>Wed</h3>
+              </header>
+              <p aria-label="Condition"><span aria-hidden="true">⛅</span> Partly cloudy</p>
+              <p><strong>22&nbsp;°C</strong></p>
+            </article>
+          </li>
+
+          <li>
+            <article aria-label="Thursday forecast">
+              <header>
+                <h3>Thu</h3>
+              </header>
+              <p aria-label="Condition"><span aria-hidden="true">🌧️</span> Rain</p>
+              <p><strong>6&nbsp;°C</strong></p>
+            </article>
+          </li>
+
+          <li>
+            <article aria-label="Friday forecast">
+              <header>
+                <h3>Fri</h3>
+              </header>
+              <p aria-label="Condition"><span aria-hidden="true">☀️</span> Sunny</p>
+              <p><strong>26&nbsp;°C</strong></p>
+            </article>
+          </li>
+        </ol>
+      </section>
+
+      <footer aria-label="Location">
+        <!-- Use a button if it will open a picker; otherwise use a plain <p> or <address>. -->
+        <button type="button" aria-label="Selected location: New York City">
+          <span aria-hidden="true">📍</span>
+          New York City
+        </button>
+      </footer>
+    </section>
+  </main>
+</body>
 </html>
