@@ -29,5 +29,7 @@
 --font-family-base: var(--font-family-montserrat);
 --heading-font: var(--font-family-montserrat);
 --heading-fontsize: var(--font-size-26);
+--app-background-color: var(--color-white-100);
 
+--primary-text-color: var(--color-white-100);
 }

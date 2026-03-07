@@ -1,0 +1,6 @@
+body {
+    font-family: var(--font-family-montserrat);
+    font-size: var(--heading-md);
+    background-color: var(--app-background-color);
+    color: var(--color-white-100);
+}
