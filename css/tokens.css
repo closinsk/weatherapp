@@ -1,0 +1,33 @@
+:root {
+--color-navy-blue-100: #222831;
+--color-navy-grey-80: #282B2F;
+--color-white-100: #FFFFFF;
+--color-black-100: #000000;
+--color-darkyellow-100: #FF9100; 
+
+--font-family-montserrat: montserrat;
+
+/* Font Sizes */
+--font-size-12: #12;
+--font-size-14: #14;
+--font-size-16: #16;
+--font-size-18: #18;
+--font-size-20: #20;
+--font-size-22: #22;
+--font-size-26: #26;
+
+/* Heading Sizes */
+--heading-sm: var(--font-size-16);
+--heading-md: var(--font-size-18);
+--heading-lg: var(--font-size-26);
+
+/* Boarder Radius */
+--photo-border-30: #30;
+--navy-textbox-border-24: #24;
+--boxed-information-border-10: #10;
+
+--font-family-base: var(--font-family-montserrat);
+--heading-font: var(--font-family-montserrat);
+--heading-fontsize: var(--font-size-26);
+
+}
