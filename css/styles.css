@@ -1,6 +1,387 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
 body {
-    font-family: var(--font-family-montserrat);
-    font-size: var(--heading-md);
-    background-color: var(--app-background-color);
-    color: var(--color-white-100);
+  min-height: 100vh;
+  font-family: var(--font-family-primary);
+  background: #e5e5e5;
+  color: var(--color-white-100);
+  padding: 24px;
+}
+
+main {
+  width: min(100%, var(--app-max-width));
+  min-height: calc(100vh - 48px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  border-radius: var(--radius-xl-32);
+  overflow: hidden;
+  background: var(--color-navy-blue-100);
+  box-shadow: var(--shadow-card);
+}
+
+/* LEFT PANEL */
+
+main > section:first-of-type {
+  min-height: 890px;
+  padding: 32px 32px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(140, 194, 236, 0.35) 0%,
+      rgba(81, 96, 212, 0.38) 100%
+    ),
+    url("../assets/beach.jpg") center / cover no-repeat,
+    linear-gradient(
+      135deg,
+      var(--color-lightblue-100) 0%,
+      var(--color-darkblue-100) 100%
+    );
+}
+
+main > section:first-of-type header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm-8);
+}
+
+main > section:first-of-type header h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+}
+
+main > section:first-of-type header p,
+main > section:first-of-type header time {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-white-100);
+}
+
+main > section:first-of-type > div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+main > section:first-of-type > div:last-child img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+}
+
+main > section:first-of-type > div:last-child p:first-of-type {
+  font-size: clamp(4rem, 8vw, 5.5rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+}
+
+main > section:first-of-type > div:last-child p:last-of-type {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.1;
+}
+
+/* RIGHT PANEL */
+
+main > section:last-of-type {
+  background: var(--color-navy-blue-100);
+  padding: 28px 34px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+/* DETAILS */
+
+main > section:last-of-type > header h2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+main > section:last-of-type dl {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+main > section:last-of-type dl div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+main > section:last-of-type dt {
+  font-size: clamp(1.6rem, 2vw, 2.2rem);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+main > section:last-of-type dd {
+  font-size: clamp(1.6rem, 2vw, 2.1rem);
+  font-weight: var(--font-weight-regular);
+}
+
+/* HIGHLIGHTS */
+
+main > section:last-of-type > section:first-of-type {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 18px;
+}
+
+main > section:last-of-type > section:first-of-type article {
+  background: var(--color-navy-grey-100);
+  border-radius: var(--radius-lg-20);
+  box-shadow: var(--shadow-card);
+}
+
+/* UV CARD */
+
+main > section:last-of-type > section:first-of-type article:first-child {
+  min-height: 128px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+main > section:last-of-type > section:first-of-type article:first-child h3 {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+main > section:last-of-type > section:first-of-type article:first-child p:nth-of-type(1) {
+  margin-top: 8px;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+}
+
+main > section:last-of-type > section:first-of-type article:first-child p:nth-of-type(2) {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+}
+
+main > section:last-of-type > section:first-of-type article:first-child::after {
+  content: "";
+  width: 100%;
+  height: 8px;
+  margin-top: auto;
+  border-radius: var(--radius-pill-50);
+  background: linear-gradient(
+    90deg,
+    var(--color-white-100) 0%,
+    var(--color-darkyellow-100) 100%
+  );
+}
+
+/* TOMORROW CARD */
+
+main > section:last-of-type > section:first-of-type article:last-child {
+  min-height: 128px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main > section:last-of-type > section:first-of-type article:last-child h3,
+main > section:last-of-type > section:first-of-type article:last-child time {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+main > section:last-of-type > section:first-of-type article:last-child p {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+}
+
+main > section:last-of-type > section:first-of-type article:last-child p img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* FORECAST */
+
+.forecast {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-radius: var(--radius-lg-20);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.forecast > h2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.forecast-day {
+  min-height: 250px;
+  background: var(--color-navy-grey-100);
+  padding: 22px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.forecast-day:last-child {
+  border-right: 0;
+}
+
+.forecast-day:hover {
+  transform: translateY(-2px);
+}
+
+.forecast-day:focus-visible {
+  outline: 2px solid var(--color-lightblue-100);
+  outline-offset: -2px;
+}
+
+.forecast-day[aria-current="true"] {
+  background: #f2f2f2;
+  color: var(--color-black-100);
+}
+
+.forecast-day .icon-light,
+.forecast-day .icon-dark {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.icon-dark {
+  display: none;
+}
+
+.forecast-day[aria-current="true"] .icon-light {
+  display: none;
+}
+
+.forecast-day[aria-current="true"] .icon-dark {
+  display: block;
+}
+
+.forecast-day h3 {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+}
+
+.forecast-day p {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+}
+
+/* LOCATION */
+
+main > section:last-of-type footer {
+  margin-top: auto;
+}
+
+main > section:last-of-type footer p {
+  width: 100%;
+  padding: 18px 24px;
+  border-radius: var(--radius-lg-20);
+  background: linear-gradient(
+    90deg,
+    var(--color-lightblue-100) 0%,
+    var(--color-darkblue-100) 100%
+  );
+  color: var(--color-white-100);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+main > section:last-of-type footer p img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  body {
+    padding: 16px;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  main > section:first-of-type {
+    min-height: 520px;
+  }
+}
+
+@media (max-width: 768px) {
+  main > section:first-of-type,
+  main > section:last-of-type {
+    padding: 24px;
+  }
+
+  main > section:last-of-type > section:first-of-type {
+    grid-template-columns: 1fr;
+  }
+
+  .forecast {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .forecast {
+    grid-template-columns: 1fr;
+  }
+
+  main > section:first-of-type > div:last-child img {
+    width: 96px;
+    height: 96px;
+  }
 }
