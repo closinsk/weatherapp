@@ -1,35 +1,43 @@
 :root {
---color-navy-blue-100: #222831;
---color-navy-grey-80: #282B2F;
---color-white-100: #FFFFFF;
---color-black-100: #000000;
---color-darkyellow-100: #FF9100; 
+  /* COLORS */
+  --color-navy-blue-100: #222831;
+  --color-navy-grey-100: #272e37;
+  --color-midyellow-100: #ffcf8f;
+  --color-lightblue-100: #8cc2ec;
+  --color-darkblue-100: #5160d4;
+  --color-white-100: #ffffff;
+  --color-black-100: #000000;
+  --color-darkyellow-100: #ff9100;
 
---font-family-montserrat: 'Montserrat';
+  /* RADIUS */
+  --radius-xl-32: 32px;
+  --radius-lg-20: 20px;
+  --radius-md-16: 16px;
+  --radius-sm-12: 12px;
+  --radius-pill-50: 50px;
 
-/* Font Sizes */
---font-size-12: #12;
---font-size-14: #14;
---font-size-16: #16;
---font-size-18: #18;
---font-size-20: #20;
---font-size-22: #22;
---font-size-26: #26;
+  /* SHADOW */
+  --shadow-offset-y-10: 10px;
+  --shadow-blur-30: 30px;
 
-/* Heading Sizes */
---heading-sm: var(--font-size-16);
---heading-md: var(--font-size-18);
---heading-lg: var(--font-size-26);
+  /* SPACING */
+  --space-xs-4: 4px;
+  --space-sm-8: 8px;
+  --space-md-16: 16px;
+  --space-lg-24: 24px;
+  --space-xl-32: 32px;
+  --space-2xl-40: 40px;
 
-/* Boarder Radius */
---photo-border-30: #30;
---navy-textbox-border-24: #24;
---boxed-information-border-10: #10;
+  /* TYPOGRAPHY */
+  --font-family-primary: "Poppins", sans-serif;
 
---font-family-base: var(--font-family-montserrat);
---heading-font: var(--font-family-montserrat);
---heading-fontsize: var(--font-size-26);
---app-background-color: var(--color-white-100);
+  --font-size-xs: 16px;
+  --font-size-sm: 20px;
+  --font-size-md: 28px;
+  --font-size-lg: 38px;
+  --font-size-xl: 50px;
 
---primary-text-color: var(--color-white-100);
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
 }
