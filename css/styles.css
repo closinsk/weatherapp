@@ -38,18 +38,18 @@ main > section:first-of-type {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(140, 194, 236, 0.35) 0%,
-      rgba(81, 96, 212, 0.38) 100%
-    ),
-    url("../assets/beach.jpg") center / cover no-repeat,
-    linear-gradient(
-      135deg,
-      var(--color-lightblue-100) 0%,
-      var(--color-darkblue-100) 100%
-    );
+background:
+  linear-gradient(
+    180deg,
+    rgba(140, 194, 236, 0.35) 0%,
+    rgba(81, 96, 212, 0.38) 100%
+  ),
+  url("../assets/images/image.png") center / cover no-repeat,
+  linear-gradient(
+    135deg,
+    var(--color-lightblue-100) 0%,
+    var(--color-darkblue-100) 100%
+  );
 }
 
 main > section:first-of-type header {
